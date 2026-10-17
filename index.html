@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment One – HTML Forms</title>
+</head>
+<body>
+
+    <header>
+        <h1>Company Registration &amp; Service Request Form</h1>
+        <p>Please complete all required fields below to register your company and request a consultation service.</p>
+    </header>
+
+    <main>
+        <form method="post" action="#">
+
+            <!-- Section 1: Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="full-name">Full Name:</label><br>
+                    <input type="text" id="full-name" name="full_name" required minlength="3" maxlength="50" placeholder="e.g., Jane Doe">
+                </p>
+
+                <p>
+                    <label for="email-address">Email Address:</label><br>
+                    <input type="email" id="email-address" name="email_address" required placeholder="e.g., jane.doe@example.com">
+                </p>
+
+                <p>
+                    <label for="phone-number">Phone Number:</label><br>
+                    <input type="tel" id="phone-number" name="phone_number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    <br>
+                    <small>Format: 123-456-7890</small>
+                </p>
+            </fieldset>
+
+            <!-- Section 2: Company Information -->
+            <fieldset>
+                <legend>Company Information</legend>
+
+                <p>
+                    <label for="company-name">Company Name:</label><br>
+                    <input type="text" id="company-name" name="company_name" required minlength="2" maxlength="100" placeholder="e.g., Acme Corporation">
+                </p>
+
+                <p>
+                    <label for="company-website">Company Website:</label><br>
+                    <input type="url" id="company-website" name="company_website" placeholder="https://www.example.com">
+                </p>
+
+                <p>
+                    <label for="company-size">Company Size:</label><br>
+                    <select id="company-size" name="company_size" required>
+                        <option value="">-- Please select an option --</option>
+                        <option value="1-10">1 - 10 employees</option>
+                        <option value="11-50">11 - 50 employees</option>
+                        <option value="51-200">51 - 200 employees</option>
+                        <option value="201-500">201 - 500 employees</option>
+                        <option value="500+">500+ employees</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="industry">Industry:</label><br>
+                    <input type="text" id="industry" name="industry" required minlength="2" maxlength="60" placeholder="e.g., Information Technology">
+                </p>
+            </fieldset>
+
+            <!-- Section 3: Service Request -->
+            <fieldset>
+                <legend>Service Request</legend>
+
+                <p>Service Type:</p>
+                <p>
+                    <input type="radio" id="service-web" name="service_type" value="web-development" required>
+                    <label for="service-web">Web Development</label><br>
+
+                    <input type="radio" id="service-consulting" name="service_type" value="it-consulting">
+                    <label for="service-consulting">IT Consulting</label><br>
+
+                    <input type="radio" id="service-cloud" name="service_type" value="cloud-solutions">
+                    <label for="service-cloud">Cloud Solutions</label><br>
+
+                    <input type="radio" id="service-security" name="service_type" value="cybersecurity">
+                    <label for="service-security">Cybersecurity</label>
+                </p>
+
+                <p>Preferred Contact Method (Select all that apply):</p>
+                <p>
+                    <input type="checkbox" id="contact-email" name="contact_method" value="email">
+                    <label for="contact-email">Email</label><br>
+
+                    <input type="checkbox" id="contact-phone" name="contact_method" value="phone">
+                    <label for="contact-phone">Phone Call</label><br>
+
+                    <input type="checkbox" id="contact-sms" name="contact_method" value="sms">
+                    <label for="contact-sms">SMS / Text Message</label>
+                </p>
+
+                <p>
+                    <label for="appointment-date">Appointment Date:</label><br>
+                    <input type="date" id="appointment-date" name="appointment_date" required min="2026-01-01" max="2026-12-31">
+                </p>
+
+                <p>
+                    <label for="appointment-time">Appointment Time:</label><br>
+                    <input type="time" id="appointment-time" name="appointment_time" required min="09:00" max="17:00">
+                    <br>
+                    <small>Business hours: 09:00 to 17:00</small>
+                </p>
+
+                <p>
+                    <label for="budget">Budget Range (USD):</label><br>
+                    <input type="number" id="budget" name="budget" min="500" max="50000" step="100" placeholder="500 - 50000">
+                    <br>
+                    <small>Minimum $500, Maximum $50,000</small>
+                </p>
+            </fieldset>
+
+            <!-- Section 4: Message and Agreement -->
+            <fieldset>
+                <legend>Message and Agreement</legend>
+
+                <p>
+                    <label for="additional-info">Additional Information:</label><br>
+                    <textarea id="additional-info" name="additional_info" rows="6" cols="50" minlength="10" maxlength="500" placeholder="Provide any additional project details or requirements (10 to 500 characters)..."></textarea>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="terms-conditions" name="terms_conditions" required>
+                    <label for="terms-conditions">I agree to the Terms and Conditions and Privacy Policy</label>
+                </p>
+            </fieldset>
+
+            <!-- Form Submission Controls -->
+            <p>
+                <button type="submit">Submit Request</button>
+                <button type="reset">Reset Form</button>
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Company Services Portal. Assignment One – HTML Forms.</p>
+    </footer>
+
+</body>
+</html>
